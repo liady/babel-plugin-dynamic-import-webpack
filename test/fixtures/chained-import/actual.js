@@ -4,6 +4,6 @@ import('test-module').then(() => (
 
 Promise.all([
   import('test-1'),
-  import('test-2'),
+  import('test-2?chunkName=test'),
   import('test-3'),
 ]).then(() => {});

@@ -16,7 +16,7 @@ describe('babel-plugin-dynamic-import-webpack', () => {
     const expected = readFileSync(join(FIXTURE_PATH, folderName, 'expected.js'), 'utf8');
     it(`works with ${folderName}`, () => {
       const result = testPlugin(actual);
-      expect(result.trim()).to.equal(expected.trim());
+      expect(result.trim().replace(/\r\n/g, '\n')).to.equal(expected.trim().replace(/\r\n/g, '\n'));
     });
   });
 });

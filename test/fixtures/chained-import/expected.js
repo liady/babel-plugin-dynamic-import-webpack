@@ -15,7 +15,7 @@ Promise.all([new Promise(resolve => {
 }), new Promise(resolve => {
   require.ensure([], require => {
     resolve(require('test-2'));
-  });
+  }, 'test');
 }), new Promise(resolve => {
   require.ensure([], require => {
     resolve(require('test-3'));
